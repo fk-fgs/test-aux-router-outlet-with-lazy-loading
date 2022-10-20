@@ -1,0 +1,18 @@
+<p>app component</p>
+
+<p>primary router outlet navigation :</p>
+<button routerLink="/feature1/page1">feature1 page1</button>
+<button routerLink="/feature2/page1">feature2 page1</button>
+
+<p>aux1 router outlet navigation :</p>
+<button [routerLink]="['/', { outlets: { aux1: ['feature1', 'page2'] }}]">feature1 page2</button>
+<button [routerLink]="['/', { outlets: { aux1: ['feature2', 'page2'] }}]">feature2 page2</button>
+
+<div class="router-outlet">
+  <p>primary router outlet :</p>
+  <router-outlet></router-outlet>
+</div>
+<div class="router-outlet">
+  <p>aux1 router outlet :</p>
+  <router-outlet name="aux1"></router-outlet>
+</div>
